@@ -2,10 +2,7 @@ import React, { useRef, useState } from "react";
 // import { Redirect, Route } from 'react-router-dom';
 import {
   IonApp,
-  IonHeader,
   IonContent,
-  IonToolbar,
-  IonTitle,
   IonGrid,
   IonRow,
   IonCol,
@@ -19,6 +16,7 @@ import {
 import BmiControls from "./components/BmiControls";
 import BmiResults from "./components/BmiResult";
 import InputControl from "./components/InputControl";
+import Header from "./components/Header";
 
 // import { IonReactRouter } from '@ionic/react-router';
 
@@ -110,12 +108,7 @@ const App: React.FC = () => {
       />
 
       <IonApp>
-        <IonHeader>
-          <IonToolbar color="primary">
-            <IonTitle>BMI Calculator</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-
+        <Header />
         <IonContent className="ion-padding">
           <IonGrid>
             <IonRow>
@@ -126,6 +119,7 @@ const App: React.FC = () => {
                 />
               </IonCol>
             </IonRow>
+
             <IonRow>
               <IonCol>
                 <IonItem>
